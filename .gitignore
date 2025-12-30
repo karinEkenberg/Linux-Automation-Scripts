@@ -1,0 +1,26 @@
+# --- Systemfiler ---
+.DS_Store
+Thumbs.db
+.cache/
+
+# --- Textredigerare (VS Code & Nano) ---
+.vscode/
+*.swp
+*~
+
+# --- Webbutveckling (JS/React) ---
+node_modules/
+npm-debug.log*
+
+# --- .NET & C# ---
+bin/
+obj/
+*.user
+*.suo
+
+# --- Säkerhet & Loggar (Viktigt!) ---
+*.log
+*.env
+secrets.*
+backup/
+*.tar.gz
