@@ -1,14 +1,16 @@
 #!/bin/bash
 
-# Starta Firefox och Terminalen i bakgrunden
+# Starta Firefox
 firefox &
-gnome-terminal &
 
-# Vänta lite så att fönstren hinner öppnas helt
-sleep 2
+# Starta terminalen
+gnome-terminal --title="HackerTerminal" &
 
-# Flytta fönstren (0 = skärm 1, x, y, bredd, höjd)
-# Terminalen till vänster (halva skärmen)
-wmctrl -r "Terminal" -e 0,0,0,960,1080
-# Firefox till höger (andra halvan)
-wmctrl -r "Firefox" -e 0,960,0,960,1080
+# Vänta på att fönstren laddas
+sleep 8
+
+# Flytta Firefox till höger
+wmctrl -r "Firefox" -e 0,960,0,960,1040
+
+# Flytta Terminalen till vänster
+wmctrl -r "HackerTerminal" -e 0,0,0,960,1040
