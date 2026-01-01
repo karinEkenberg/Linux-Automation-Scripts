@@ -3,6 +3,7 @@
 echo "--- UTSKRIFT FÖRE RENSNING ---"
 df -h / | grep /
 echo ""
+SIZE=$(du -sh ~/.local/share/Trash/files | cut -f1)
 
 echo "Städar upp systemet..."
 # Rensar gamla paketfiler som inte behövs
@@ -22,3 +23,4 @@ echo "--- UTSKRIFT EFTER RENSNING ---"
 df -h / | grep /
 echo ""
 echo "Datorn är nu lite renare och grönare!"
+echo "Du har precis frigjort $SIZE från papperskorgen."
