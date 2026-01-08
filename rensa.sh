@@ -9,6 +9,7 @@ echo "Städar upp systemet..."
 # Rensar gamla paketfiler som inte behövs
 sudo apt-get autoremove -y
 sudo apt-get autoclean -y
+sudo docker system prune -f && sudo docker network prune -f && sudo apt autoremove -y && sudo apt autoclean
 
 # Rensar gamla Flatpak-delar (om du hade sådana för Steam)
 if command -v flatpak &> /dev/null; then
